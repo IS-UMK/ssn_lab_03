@@ -34,8 +34,8 @@ Parametry początkowe (ustawiane w konstruktorze):
    gdzie $\sigma$ funkcja aktywacji warstwy ukrytej $\sigma(x)=\frac{1}{1+e^{-x}}$ </ul></ul>
 6. <ul><ul>oblicz sygnał błędu (metoda backward(y)) <br> 
    $\boldsymbol{\delta}_2 = \mathbf{y}_{onehot} - \mathbf{h}_2$<br>
-   $\boldsymbol{\delta}_1 = \sigma' \, \boldsymbol{\delta}_2 \, \mathbf{W}_2$<br>
-   gdzie $\sigma'$ to pochodna funkcji aktywacji $\sigma^{\prime}(x)=\sigma(x)(1-\sigma(x))$</ul></ul>
+   $\boldsymbol{\delta}_1 = \sigma' \circ \boldsymbol{\delta}_2 \, \mathbf{W}_2$<br>
+   gdzie $\sigma'$ to pochodna funkcji aktywacji $\sigma^{\prime}(x)=\sigma(x)(1-\sigma(x))$, iloczyn $\mathbf{a}\circ \mathbf{b}$ po współżędnych </ul></ul>
 7. <ul><ul>aktualizacja wag  (metoda update(x))<br>
    $\mathbf{W}_1 \leftarrow \mathbf{W}_1 + \eta \, \boldsymbol{\delta}_1 \cdot \mathbf{x}^T$  <br>
    $\mathbf{b}_1 \leftarrow \mathbf{b}_1 + \eta \, \boldsymbol{\delta}_1$  <br>
