@@ -1,3 +1,5 @@
+from sklearn.preprocessing import OneHotEncoder
+import numpy as np
 
 def softmax(z):
     # stabilna numerycznie funkcja softmax(x)
@@ -10,13 +12,17 @@ def log_softmax(x):
     x_max = np.max(x)
     return x - x_max - np.log(np.sum(np.exp(x - x_max)))
 
+def sigmoid(x):
+    return 1.0/(1.0+np.exp(-x))
+
 
 class MLPClassifier:
     
-    def __init__(self, eta=0.1, n_epochs=100):
+    def __init__(self, n_hidden=10, eta=0.1, n_epochs=100):
         
         self.n_epochs = n_epochs   # ilość epok
         self.eta = eta             # stała uczenia
+        self.n_hidden = n_hidden   # ilość neuronów w warstwie ukrytej
 
     def accuracy(self, X, y):
         # poprawnośc klasyfikacji 
