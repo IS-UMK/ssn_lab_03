@@ -24,8 +24,8 @@ Parametry początkowe (ustawiane w konstruktorze):
 
 1. Zamień etykiety $y$ do postaci wektora _one-hot_ $\mathbf{y}_{onehot}$
 2. Zainicjuj macierze wag i wektory wyrazów wolnych (metoda ``init(X, y)``)<br>
-   warstwa ukryta: $\mathbf{W}_1$ (wymiary  $k \times d$), $\mathbf{b}_1$ (wymiary $k \times 1$) <br>
-   warstwa wyjściowa: $\mathbf{W}_2$ (wymiary $c \times k$), $\mathbf{b}_2$ (wymiary $c \times 1$)
+   warstwa ukryta: $\mathbf{W}_1$ (wymiary  $k \times d$), \, $\mathbf{b}_1$ (wymiary $k \times 1$) <br>
+   warstwa wyjściowa: $\mathbf{W}_2$ (wymiary $c \times k$),\, $\mathbf{b}_2$ (wymiary $c \times 1$)
 3. Powtarzaj $n$ razy:
 4. <ul>Dla każdego $\mathbf{x}$ ze zbioru treningowego wykonaj</ul>
 5. <ul><ul>propagacja sygnału (metoda forward(x))<br>  
@@ -35,12 +35,12 @@ Parametry początkowe (ustawiane w konstruktorze):
 6. <ul><ul>oblicz sygnał błędu (metoda backward(y)) <br> 
    $\boldsymbol{\delta}_2 = \mathbf{y}_{onehot} - \mathbf{h}_2$<br>
    $\boldsymbol{\delta}_1 = \sigma' \circ \boldsymbol{\delta}_2 \, \mathbf{W}_2$<br>
-   gdzie $\sigma'$ to pochodna funkcji aktywacji $\sigma^{\prime}(x)=\sigma(x)(1-\sigma(x))$, iloczyn $\mathbf{a}\circ \mathbf{b}$ po współżędnych </ul></ul>
+   gdzie $\sigma'$ to pochodna funkcji aktywacji $\sigma^{\prime}(x)=\sigma(x)(1-\sigma(x))$, iloczyn $\mathbf{a}\circ \mathbf{b}$ jest wykonywany po współżędnych </ul></ul>
 7. <ul><ul>aktualizacja wag  (metoda update(x))<br>
    $\mathbf{W}_1 \leftarrow \mathbf{W}_1 + \eta \, \boldsymbol{\delta}_1 \cdot \mathbf{x}^T$  <br>
    $\mathbf{b}_1 \leftarrow \mathbf{b}_1 + \eta \, \boldsymbol{\delta}_1$  <br>
    $\mathbf{W}_2 \leftarrow \mathbf{W}_2 + \eta \, \boldsymbol{\delta}_2 \cdot \mathbf{h}_1^T$   <br>
-   $\mathbf{b}_2 \leftarrow \mathbf{b}_2 + \eta \, \boldsymbol{\delta}_2$  </ul></ul>
+   $\mathbf{b}_2 \leftarrow \mathbf{b}_2 + \eta \, \boldsymbol{\delta}_2$  <br> iloczyn $\mathbf{a}\cdot \mathbf{b}^T$ oznacza iloczyn zewnętrzny </ul></ul>
 8. <ul>na koniec epoki oblicz i zachowaj wartość funkcji kosztu entropii krzyżowej $J$ oraz poprawność klasyfikacji  </ul>
    $$J = -\sum_{i=1}^{n}\mathbf{y}_{i} \log{f(\mathbf{x}_i})$$ 
 
