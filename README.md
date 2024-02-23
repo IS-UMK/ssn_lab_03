@@ -2,8 +2,8 @@
 
 Zapoznaj się z zawartością notatnika Jupyter umieszczonego w repozytorium  i wykonaj zawarte w nim ćwiczenia.
 
-Notatnik: [03_mlp_softmax.ipynb](https://github.com/IS-UMK/ssn_23_lab_03/blob/master/03_mlp_softmax.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IS-UMK/ssn_23_lab_03/blob/master/03_mlp_softmax.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IS-UMK/ssn_23_lab_03/master?filepath=03_mlp_softmax.ipynb)
+Notatnik: [03_mlp_softmax.ipynb](https://github.com/IS-UMK/ssn_lab_03/blob/master/03_mlp_softmax.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IS-UMK/ssn_lab_03/blob/master/03_mlp_softmax.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IS-UMK/ssn_lab_03/master?filepath=03_mlp_softmax.ipynb)
 
 ---
 
@@ -14,7 +14,7 @@ Sieć działa dla danych o specyfikacji:
 * $X$ zbiór treningowy (macierz $n \times d$), $n$ przypadków opisanych $d$ zmiennymi
 * $\mathbf{y} \in [0, 1, 2, \ldots, c-1 ]$ wektor etykiet klas
 
-Sieć uczona jest zgodnie z poniższym algorytmem realizowanym przez metodę ``fit(X, y)``, której implementację znajdziesz w pliku [MLPClassifier.py](https://github.com/IS-UMK/ssn_23_lab_03/blob/master/MLPClassifier.py). Zaimplementuj brakujące metody ``init()``, ``feedforward()``, ``backprop()``, ``update()``, ``predict()`` tak aby zrealizować uczenie oraz predykcję modelu. 
+Sieć uczona jest zgodnie z poniższym algorytmem realizowanym przez metodę ``fit(X, y)``, której implementację znajdziesz w pliku [MLPClassifier.py](https://github.com/IS-UMK/ssn_lab_03/blob/master/MLPClassifier.py). Zaimplementuj brakujące metody ``init()``, ``feedforward()``, ``backprop()``, ``update()``, ``predict()`` tak aby zrealizować uczenie oraz predykcję modelu. 
 
 **Algorytm uczenia**  
 Parametry początkowe (ustawiane w konstruktorze): 
