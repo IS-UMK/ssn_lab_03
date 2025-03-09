@@ -30,7 +30,7 @@ Parametry początkowe (ustawiane w konstruktorze):
 4. <ul>Dla każdego $\mathbf{x}$ ze zbioru treningowego wykonaj</ul>
 5. <ul><ul>propagacja sygnału (metoda forward(x))<br>  
    $\mathbf{h}_1 = \sigma \left(\mathbf{W}_1 \mathbf{x} + \mathbf{b}_1\right)$  <br>
-   $\mathbf{h}_2 = \operatorname{softmax} \left(\mathbf{W}_2 \mathbf{h}_1 + \mathbf{b}_2\right)$  <br>
+   $\mathbf{h}_2 = \mathop{\text{softmax}} \left(\mathbf{W}_2 \mathbf{h}_1 + \mathbf{b}_2\right)$  <br>
    gdzie $\sigma$ funkcja aktywacji warstwy ukrytej $\sigma(x)=\frac{1}{1+e^{-x}}$ </ul></ul>
 6. <ul><ul>oblicz sygnał błędu (metoda backward(y)) <br> 
    $\boldsymbol{\delta}_2 = \mathbf{y}_{onehot} - \mathbf{h}_2$<br>
