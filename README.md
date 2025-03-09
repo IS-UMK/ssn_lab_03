@@ -11,8 +11,8 @@ Notatnik: [03_mlp_softmax.ipynb](https://github.com/IS-UMK/ssn_lab_03/blob/maste
 
 Zaimplementuj sieć MLP z jedną warstwą ukrytą przeznaczoną do klasyfikacji wieloklasowej ($c$ klas) uczoną za pomocą wstecznej propagacji.  
 Sieć działa dla danych o specyfikacji:
-* $X$ zbiór treningowy (macierz $n \times d$), $n$ przypadków opisanych $d$ zmiennymi
-* $\mathbf{y} \in [0, 1, 2, \ldots, c-1 ]$ wektor etykiet klas
+* $X$ zbiór treningowy (macierz $n \times d$), $n$ przypadków opisanych $d$ zmiennymi posiadającycmi wyłacznie wartości numeryczne
+* $\mathbf{y} \in [0, 1, 2, \ldots, c-1 ]$ wektor etykiet klas (wartości całkowite)
 
 Sieć uczona jest zgodnie z poniższym algorytmem realizowanym przez metodę ``fit(X, y)``, której implementację znajdziesz w pliku [MLPClassifier.py](https://github.com/IS-UMK/ssn_lab_03/blob/master/MLPClassifier.py). Zaimplementuj brakujące metody ``init()``, ``feedforward()``, ``backprop()``, ``update()``, ``predict()`` tak aby zrealizować uczenie oraz predykcję modelu. 
 
@@ -44,7 +44,7 @@ Parametry początkowe (ustawiane w konstruktorze):
 8. <ul>na koniec epoki oblicz i zachowaj wartość funkcji kosztu entropii krzyżowej $J$ oraz poprawność klasyfikacji  </ul>
    $$J = -\sum_{i=1}^{n}\mathbf{y}_{i} \log{f(\mathbf{x}_i})$$ 
 
-Podziel zbiór danych ``digits`` na część treningową i testową w proporcji 50%/50%. Wykonaj trening na zbiorze treningowym. Wyrysuj wykres funkcji kosztu oraz poprawności klasyfikacji w kolejnych epokach. Wyznacz poprawność klasyfikacji na zbiorze testowym. 
+Podziel zbiór danych ``digits`` na część treningową i testową w proporcji 50%/50%. Wykonaj trening na zbiorze treningowym. Wyrysuj wykres prezentujący wartości funkcji kosztu oraz poprawności klasyfikacji w kolejnych epokach. Wyznacz poprawność klasyfikacji uzyskanego modelu na zbiorze testowym. 
 Spróbuj dobrać parametry (ilość epok, ilość neuronów, stała uczenia) tak aby uzyskać jak najlepszy wynik.  
 
 Rozwiązanie w postaci notatnika Jupyter (``.ipynb``) lub skrypt w języku Python (``.py``) umieść w Moodle lub prześlij do repozytorium GitHub.
